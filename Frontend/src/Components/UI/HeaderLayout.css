@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 16px;
+}
+
+.nav-item {
+    border: 10px;
+    padding-left: 2%;
+}
