@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "../axiosConfig";
-// import "../UI/BookTicket.css";
 import Flight from "../Others/FlightComponent";
 import SearchBar from "../Others/SearchBarComponent";
 import { useNavigate } from "react-router-dom";
@@ -34,8 +33,6 @@ const BookTicketForm = (props) => {
   const submitHandler = async (finalTicket) => {
     const response = await axios.post("/book-ticket", finalTicket);
     if (response?.status === 200) {
-      setTicket({})
-      ("Ticket Booked Successfully!");
       navigate("/view-bookings");
     } else {
       console.error("Error submitting form:", response.status);
