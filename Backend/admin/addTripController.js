@@ -9,6 +9,7 @@ const addTrip = async (req, res) => {
       arrivalTime,
       depatureTime,
       availableDays,
+      flightName
     } = req.body;
 
     const setArrivalTime = new Date();
@@ -21,6 +22,7 @@ const addTrip = async (req, res) => {
     try {
       const newTrip = new Trip({
         flightNumber: flightNumber,
+        flightName: flightName,
         source: source,
         destination: destination,
         availableDays: availableDays,
