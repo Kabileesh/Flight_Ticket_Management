@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const AddTripForm = () => {
   const [flightNumber, setFlightNumber] = useState(0);
+  const [flightName, setFlightName] = useState("");
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
   const [availableDays, setAvailableDays] = useState([
@@ -37,6 +38,9 @@ const AddTripForm = () => {
     setFlightNumber(event.target.value);
   };
 
+  const flightNameHandler = (event) => {
+    setFlightName(event.target.value);
+  }
   const sourceSelector = (event) => {
     setSource(event.target.value);
   };
@@ -107,6 +111,15 @@ const AddTripForm = () => {
             arie-label="Flight Number"
             type="number"
             onChange={flightHandler}
+          />
+        </Col>
+        <Col>
+          <Input
+            className="form-control"
+            placeholder="Flight Name"
+            arie-label="Flight Name"
+            type="text"
+            onChange={flightNameHandler}
           />
         </Col>
         <Col>
