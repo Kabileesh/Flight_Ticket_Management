@@ -5,6 +5,10 @@ const tripSchema = new mongoose.Schema({
     type: Number,
     required : true,
   },
+  flightName: {
+    type: String,
+    required: true,
+  },
   source: {
     type: String,
     required: true,
